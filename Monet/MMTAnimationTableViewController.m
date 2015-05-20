@@ -8,8 +8,9 @@
 
 #import "MMTAnimationTableViewController.h"
 #import <Tourbillon/DCHTourbillon.h>
+#import "BubbleTransitionViewController.h"
 
-NSString * const kMMTSpringTableViewCellReuseIdentifier = @"MMTSpringTableViewCell";
+NSString * const kMMTSpringTableViewCellReuseIdentifier = @"MMTTableViewCell";
 
 @interface MMTAnimationTableViewController ()
 
@@ -34,80 +35,12 @@ NSString * const kMMTSpringTableViewCellReuseIdentifier = @"MMTSpringTableViewCe
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.colorAry = @[[UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:1.0]
-//                      , [UIColor colorWithRed:1.0 green:0.3 blue:0.0 alpha:1.0]
-//                      , [UIColor colorWithRed:1.0 green:0.6 blue:0.0 alpha:1.0]
-//                      , [UIColor colorWithRed:0.3 green:0.7 blue:0.0 alpha:1.0]
-//                      , [UIColor colorWithRed:0.2 green:1.0 blue:0.2 alpha:1.0]
-//                      , [UIColor colorWithRed:0.0 green:0.75 blue:0.5 alpha:1.0]
-//                      , [UIColor colorWithRed:0.0 green:0.5 blue:0.75 alpha:1.0]
-//                      , [UIColor colorWithRed:0.0 green:0.25 blue:1.0 alpha:1.0]
-//                      , [UIColor colorWithRed:0.0 green:0.0 blue:1.0 alpha:1.0]
-//                      ];
+    self.colorAry = [UIColor DCH_colorfulArray];
     
-    self.colorAry = @[[UIColor aluminumColor]
-                      , [UIColor aquaColor]
-                      , [UIColor asparagusColor]
-                      , [UIColor bananaColor]
-                      , [UIColor blueberryColor]
-                      , [UIColor bubblegumColor]
-                      , [UIColor cantaloupeColor]
-                      , [UIColor carnationColor]
-                      , [UIColor cayenneColor]
-                      , [UIColor cloverColor]
-                      , [UIColor eggplantColor]
-                      , [UIColor fernColor]
-                      , [UIColor floraColor]
-                      , [UIColor grapeColor]
-                      , [UIColor honeydewColor]
-                      , [UIColor iceColor]
-                      , [UIColor ironColor]
-                      , [UIColor lavenderColor]
-                      , [UIColor leadColor]
-                      , [UIColor lemonColor]
-                      , [UIColor licoriceColor]
-                      , [UIColor limeColor]
-                      , [UIColor magnesiumColor]
-                      , [UIColor maraschinoColor]
-                      , [UIColor maroonColor]
-                      , [UIColor midnightColor]
-                      , [UIColor mochaColor]
-                      , [UIColor mossColor]
-                      , [UIColor murcuryColor]
-                      , [UIColor nickelColor]
-                      , [UIColor oceanColor]
-                      , [UIColor orchidColor]
-                      , [UIColor plumColor]
-                      , [UIColor salmonColor]
-                      , [UIColor seaFoamColor]
-                      , [UIColor silverColor]
-                      , [UIColor skyColor]
-                      , [UIColor snowColor]
-                      , [UIColor spindriftColor]
-                      , [UIColor springColor]
-                      , [UIColor steelColor]
-                      , [UIColor strawberryColor]
-                      , [UIColor tangerineColor]
-                      , [UIColor tealColor]
-                      , [UIColor tinColor]
-                      , [UIColor tungstenColor]
-                      , [UIColor turquoiseColor]
-                      ];
-    
-    self.animationDic = @{@"Parallax": @"Parallax"
-                          , @"Shimmer": @"Shimmer"
-                          , @"Dropdown menu": @"Dropdown menu"
-                          , @"Paper table view cell": @"Paper table view cell"
-                          , @"Flower menu": @"Flower menu"
-                          , @"UI dynamic": @"UI dynamic"
+    self.animationDic = @{@(MMTAnimationType_BubbleTransition): @"BubbleTransition"
+                          , @(MMTAnimationType_Shimmer): @"Shimmer"
+                          , @(MMTAnimationType_ColorArt): @"ColorArt"
                           };
-    
-    NSMutableDictionary *tmpDic = [NSMutableDictionary dictionary];
-    for (NSInteger i = 0; i < 100; ++i) {
-        NSString *str = [NSString stringWithFormat:@"%ld", (long)i];
-        [tmpDic setObject:str forKey:str];
-    }
-    self.animationDic = tmpDic;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -130,7 +63,7 @@ NSString * const kMMTSpringTableViewCellReuseIdentifier = @"MMTSpringTableViewCe
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return self.colorAry.count;
+    return MAX(self.colorAry.count, self.animationDic.allKeys.count);
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -139,41 +72,15 @@ NSString * const kMMTSpringTableViewCellReuseIdentifier = @"MMTSpringTableViewCe
     // Configure the cell...
 //    cell.textLabel.text = [self.animationDic.allKeys objectAtIndex:indexPath.row];
     
-//    cell.textLabel.backgroundColor = [UIColor blackColor];
-//    cell.detailTextLabel.text = [self.animationDic objectForKey:cell.textLabel.text];
-//    cell.detailTextLabel.backgroundColor = [UIColor blackColor];
-    cell.backgroundColor = [self colorForIndex:indexPath.row];
+    cell.backgroundColor = [self colorForIndex:(indexPath.row % (MAX(self.colorAry.count, self.animationDic.allKeys.count)))];
     cell.tag = [self cellTagFromIndex:indexPath];
-    cell.textLabel.text = [UIColor DCH_colorName:cell.backgroundColor];
+    if (indexPath.row < self.animationDic.allKeys.count) {
+        cell.textLabel.text = self.animationDic.allValues[indexPath.row];
+    } else {
+        cell.textLabel.text = [UIColor DCH_colorName:cell.backgroundColor];
+    }
 //    [cell customizeUI];
     return cell;
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    do {
-//        UITableView *tableView = (UITableView *)scrollView;
-//        [[tableView visibleCells] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-//            do {
-//                MMTSpringTableViewCell *cell = (MMTSpringTableViewCell *)obj;
-//                CGFloat scrollDelta = cell.bounds.origin.y - scrollView.bounds.origin.y;
-//                CGPoint touchLocation = [scrollView.panGestureRecognizer locationInView:scrollView];
-//                
-//                for (UIAttachmentBehavior *spring in cell.dynamicAnimator.behaviors) {
-//                    CGPoint anchorPoint = spring.anchorPoint;
-//                    CGFloat distanceFromTouch = fabs(touchLocation.y - anchorPoint.y);
-//                    CGFloat scrollResistance = distanceFromTouch / 500.0f; // higher the number, larger the bounce
-//                    
-//                    UICollectionViewLayoutAttributes *item = [spring.items firstObject];
-//                    CGPoint center = item.center;
-//                    center.y += scrollDelta * scrollResistance;
-//                    item.center = center;
-//                    
-//                    [cell.dynamicAnimator updateItemUsingCurrentState:item];
-//                }
-//            } while (NO);
-//        }];
-        
-    } while (NO);
 }
 
 /*
@@ -217,21 +124,32 @@ NSString * const kMMTSpringTableViewCellReuseIdentifier = @"MMTSpringTableViewCe
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     do {
-        if (!sender || ![sender isKindOfClass:[UITableViewCell class]]) {
-            break;
-        }
-        UITableViewCell *cell = (UITableViewCell *)sender;
-        NSIndexPath *indexPath = [self indexPathFromCellTag:cell.tag];
+        ;
+    } while (NO);
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    do {
         switch (indexPath.section) {
             case 0:
             {
                 switch (indexPath.row) {
-                    case 0:
+                    case MMTAnimationType_BubbleTransition:
                     {
-//                        int i = 0;
+                        BubbleTransitionViewController *vc = [[BubbleTransitionViewController alloc] initWithNibName:nil bundle:nil];
+                        [self.navigationController pushViewController:vc animated:YES];
                     }
                         break;
-                        
+                    case MMTAnimationType_Shimmer:
+                    {
+                        int i = 0;
+                    }
+                        break;
+                    case MMTAnimationType_ColorArt:
+                    {
+                        int i = 0;
+                    }
+                        break;
                     default:
                         break;
                 }
@@ -248,9 +166,6 @@ NSString * const kMMTSpringTableViewCellReuseIdentifier = @"MMTSpringTableViewCe
 - (UIColor *)colorForIndex:(NSInteger)index {
     UIColor *color = nil;
     do {
-//        NSInteger countOfColorAry = self.colorAry.count - 1;
-//        NSInteger idx = labs(index % countOfColorAry - (index / countOfColorAry) % 2 * countOfColorAry);
-//        color = [self.colorAry objectAtIndex:idx];
         color = [self.colorAry objectAtIndex:index];
     } while (NO);
     return color;

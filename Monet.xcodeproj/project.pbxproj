@@ -14,8 +14,13 @@
 		8D2F81351AF74BCE0093430D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D2F81341AF74BCE0093430D /* Images.xcassets */; };
 		8D2F81381AF74BCE0093430D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2F81361AF74BCE0093430D /* LaunchScreen.xib */; };
 		8D2F81441AF74BCE0093430D /* MonetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2F81431AF74BCE0093430D /* MonetTests.m */; };
-		8DBA3ECC1AF8951200135739 /* TLSpringFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA3ECB1AF8951200135739 /* TLSpringFlowLayout.m */; };
 		8DBC40411AF790F5006CCEC8 /* MMTAnimationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBC40401AF790F5006CCEC8 /* MMTAnimationTableViewController.m */; };
+		8DF1A7461B0CA714007A9DE1 /* DCHBubbleAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF1A7421B0CA714007A9DE1 /* DCHBubbleAnimatedTransitioning.m */; };
+		8DF1A7471B0CA714007A9DE1 /* TLSpringFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF1A7451B0CA714007A9DE1 /* TLSpringFlowLayout.m */; };
+		8DF1A74B1B0CA90A007A9DE1 /* BubbleTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF1A7491B0CA90A007A9DE1 /* BubbleTransitionViewController.m */; };
+		8DF1A74C1B0CA90A007A9DE1 /* BubbleTransitionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DF1A74A1B0CA90A007A9DE1 /* BubbleTransitionViewController.xib */; };
+		8DF1A7501B0CA929007A9DE1 /* BubbleTransitionModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF1A74E1B0CA929007A9DE1 /* BubbleTransitionModalViewController.m */; };
+		8DF1A7511B0CA929007A9DE1 /* BubbleTransitionModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DF1A74F1B0CA929007A9DE1 /* BubbleTransitionModalViewController.xib */; };
 		BBC9469849B5929EFE5EAFEC /* libPods-MonetTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49954E62A686DB6415C71487 /* libPods-MonetTests.a */; };
 /* End PBXBuildFile section */
 
@@ -43,10 +48,18 @@
 		8D2F813D1AF74BCE0093430D /* MonetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D2F81421AF74BCE0093430D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D2F81431AF74BCE0093430D /* MonetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonetTests.m; sourceTree = "<group>"; };
-		8DBA3ECA1AF8951200135739 /* TLSpringFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLSpringFlowLayout.h; sourceTree = "<group>"; };
-		8DBA3ECB1AF8951200135739 /* TLSpringFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLSpringFlowLayout.m; sourceTree = "<group>"; };
 		8DBC403F1AF790F5006CCEC8 /* MMTAnimationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTAnimationTableViewController.h; sourceTree = "<group>"; };
 		8DBC40401AF790F5006CCEC8 /* MMTAnimationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTAnimationTableViewController.m; sourceTree = "<group>"; };
+		8DF1A7411B0CA714007A9DE1 /* DCHBubbleAnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCHBubbleAnimatedTransitioning.h; sourceTree = "<group>"; };
+		8DF1A7421B0CA714007A9DE1 /* DCHBubbleAnimatedTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCHBubbleAnimatedTransitioning.m; sourceTree = "<group>"; };
+		8DF1A7441B0CA714007A9DE1 /* TLSpringFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLSpringFlowLayout.h; sourceTree = "<group>"; };
+		8DF1A7451B0CA714007A9DE1 /* TLSpringFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLSpringFlowLayout.m; sourceTree = "<group>"; };
+		8DF1A7481B0CA90A007A9DE1 /* BubbleTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleTransitionViewController.h; sourceTree = "<group>"; };
+		8DF1A7491B0CA90A007A9DE1 /* BubbleTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleTransitionViewController.m; sourceTree = "<group>"; };
+		8DF1A74A1B0CA90A007A9DE1 /* BubbleTransitionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BubbleTransitionViewController.xib; sourceTree = "<group>"; };
+		8DF1A74D1B0CA929007A9DE1 /* BubbleTransitionModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleTransitionModalViewController.h; sourceTree = "<group>"; };
+		8DF1A74E1B0CA929007A9DE1 /* BubbleTransitionModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleTransitionModalViewController.m; sourceTree = "<group>"; };
+		8DF1A74F1B0CA929007A9DE1 /* BubbleTransitionModalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BubbleTransitionModalViewController.xib; sourceTree = "<group>"; };
 		9F87CB6CE6A464018C6F78C8 /* Pods-Monet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Monet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Monet/Pods-Monet.debug.xcconfig"; sourceTree = "<group>"; };
 		D1B9E6D8CE4AF96AE8F504EF /* Pods-MonetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonetTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MonetTests/Pods-MonetTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D5C3A7B62A1AEBFD415096DA /* Pods-MonetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonetTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MonetTests/Pods-MonetTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,8 +120,8 @@
 		8D2F81261AF74BCE0093430D /* Monet */ = {
 			isa = PBXGroup;
 			children = (
-				8DBA3ECA1AF8951200135739 /* TLSpringFlowLayout.h */,
-				8DBA3ECB1AF8951200135739 /* TLSpringFlowLayout.m */,
+				8DF1A7401B0CA714007A9DE1 /* BubbleTransition */,
+				8DF1A7431B0CA714007A9DE1 /* SpringFlowLayout */,
 				8DBC403F1AF790F5006CCEC8 /* MMTAnimationTableViewController.h */,
 				8DBC40401AF790F5006CCEC8 /* MMTAnimationTableViewController.m */,
 				8D2F812B1AF74BCE0093430D /* AppDelegate.h */,
@@ -145,6 +158,30 @@
 				8D2F81421AF74BCE0093430D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8DF1A7401B0CA714007A9DE1 /* BubbleTransition */ = {
+			isa = PBXGroup;
+			children = (
+				8DF1A7411B0CA714007A9DE1 /* DCHBubbleAnimatedTransitioning.h */,
+				8DF1A7421B0CA714007A9DE1 /* DCHBubbleAnimatedTransitioning.m */,
+				8DF1A7481B0CA90A007A9DE1 /* BubbleTransitionViewController.h */,
+				8DF1A7491B0CA90A007A9DE1 /* BubbleTransitionViewController.m */,
+				8DF1A74A1B0CA90A007A9DE1 /* BubbleTransitionViewController.xib */,
+				8DF1A74D1B0CA929007A9DE1 /* BubbleTransitionModalViewController.h */,
+				8DF1A74E1B0CA929007A9DE1 /* BubbleTransitionModalViewController.m */,
+				8DF1A74F1B0CA929007A9DE1 /* BubbleTransitionModalViewController.xib */,
+			);
+			path = BubbleTransition;
+			sourceTree = "<group>";
+		};
+		8DF1A7431B0CA714007A9DE1 /* SpringFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				8DF1A7441B0CA714007A9DE1 /* TLSpringFlowLayout.h */,
+				8DF1A7451B0CA714007A9DE1 /* TLSpringFlowLayout.m */,
+			);
+			path = SpringFlowLayout;
 			sourceTree = "<group>";
 		};
 		B08D2B747E92A6C4CCD46C86 /* Frameworks */ = {
@@ -241,6 +278,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D2F81331AF74BCE0093430D /* Main.storyboard in Resources */,
+				8DF1A74C1B0CA90A007A9DE1 /* BubbleTransitionViewController.xib in Resources */,
+				8DF1A7511B0CA929007A9DE1 /* BubbleTransitionModalViewController.xib in Resources */,
 				8D2F81381AF74BCE0093430D /* LaunchScreen.xib in Resources */,
 				8D2F81351AF74BCE0093430D /* Images.xcassets in Resources */,
 			);
@@ -323,9 +362,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DBA3ECC1AF8951200135739 /* TLSpringFlowLayout.m in Sources */,
+				8DF1A7461B0CA714007A9DE1 /* DCHBubbleAnimatedTransitioning.m in Sources */,
 				8D2F812D1AF74BCE0093430D /* AppDelegate.m in Sources */,
+				8DF1A74B1B0CA90A007A9DE1 /* BubbleTransitionViewController.m in Sources */,
+				8DF1A7501B0CA929007A9DE1 /* BubbleTransitionModalViewController.m in Sources */,
 				8D2F812A1AF74BCE0093430D /* main.m in Sources */,
+				8DF1A7471B0CA714007A9DE1 /* TLSpringFlowLayout.m in Sources */,
 				8DBC40411AF790F5006CCEC8 /* MMTAnimationTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

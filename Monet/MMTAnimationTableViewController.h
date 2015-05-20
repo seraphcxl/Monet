@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSUInteger, MMTAnimationType) {
+    MMTAnimationType_BubbleTransition,
+    MMTAnimationType_Shimmer,
+    MMTAnimationType_ColorArt,
+};
+
 @interface MMTAnimationTableViewController : UITableViewController
 
 @end
