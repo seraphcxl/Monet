@@ -9,6 +9,7 @@
 #import "MMTAnimationTableViewController.h"
 #import <Tourbillon/DCHTourbillon.h>
 #import "BubbleTransitionViewController.h"
+#import "ColoeArtTableViewController.h"
 
 NSString * const kMMTSpringTableViewCellReuseIdentifier = @"MMTTableViewCell";
 
@@ -147,7 +148,9 @@ NSString * const kMMTSpringTableViewCellReuseIdentifier = @"MMTTableViewCell";
                         break;
                     case MMTAnimationType_ColorArt:
                     {
-                        int i = 0;
+                        ColoeArtTableViewController *vc = [[ColoeArtTableViewController alloc] init];
+//                        vc.view.frame = CGRectMake(0.0f, 0.0f, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+                        [self.navigationController pushViewController:vc animated:YES];
                     }
                         break;
                     default:

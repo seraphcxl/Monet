@@ -14,6 +14,10 @@
 		8D2F81351AF74BCE0093430D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D2F81341AF74BCE0093430D /* Images.xcassets */; };
 		8D2F81381AF74BCE0093430D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2F81361AF74BCE0093430D /* LaunchScreen.xib */; };
 		8D2F81441AF74BCE0093430D /* MonetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2F81431AF74BCE0093430D /* MonetTests.m */; };
+		8D9D0EDC1B0D6CC4002317BD /* UIImage+DCHColorArt.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D0EDB1B0D6CC4002317BD /* UIImage+DCHColorArt.m */; };
+		8D9D0EE51B0D73A4002317BD /* ColoeArtTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D0EE31B0D73A4002317BD /* ColoeArtTableViewController.m */; };
+		8D9D0EE91B0D7404002317BD /* DCHLinearGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D0EE81B0D7404002317BD /* DCHLinearGradientView.m */; };
+		8D9D0EED1B0D7FF9002317BD /* ColorArtTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D0EEB1B0D7FF9002317BD /* ColorArtTableViewCell.m */; };
 		8DBC40411AF790F5006CCEC8 /* MMTAnimationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBC40401AF790F5006CCEC8 /* MMTAnimationTableViewController.m */; };
 		8DF1A7461B0CA714007A9DE1 /* DCHBubbleAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF1A7421B0CA714007A9DE1 /* DCHBubbleAnimatedTransitioning.m */; };
 		8DF1A7471B0CA714007A9DE1 /* TLSpringFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF1A7451B0CA714007A9DE1 /* TLSpringFlowLayout.m */; };
@@ -48,6 +52,14 @@
 		8D2F813D1AF74BCE0093430D /* MonetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D2F81421AF74BCE0093430D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D2F81431AF74BCE0093430D /* MonetTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonetTests.m; sourceTree = "<group>"; };
+		8D9D0EDA1B0D6CC4002317BD /* UIImage+DCHColorArt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DCHColorArt.h"; sourceTree = "<group>"; };
+		8D9D0EDB1B0D6CC4002317BD /* UIImage+DCHColorArt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DCHColorArt.m"; sourceTree = "<group>"; };
+		8D9D0EE21B0D73A4002317BD /* ColoeArtTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColoeArtTableViewController.h; sourceTree = "<group>"; };
+		8D9D0EE31B0D73A4002317BD /* ColoeArtTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColoeArtTableViewController.m; sourceTree = "<group>"; };
+		8D9D0EE71B0D7404002317BD /* DCHLinearGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCHLinearGradientView.h; sourceTree = "<group>"; };
+		8D9D0EE81B0D7404002317BD /* DCHLinearGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCHLinearGradientView.m; sourceTree = "<group>"; };
+		8D9D0EEA1B0D7FF9002317BD /* ColorArtTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorArtTableViewCell.h; sourceTree = "<group>"; };
+		8D9D0EEB1B0D7FF9002317BD /* ColorArtTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorArtTableViewCell.m; sourceTree = "<group>"; };
 		8DBC403F1AF790F5006CCEC8 /* MMTAnimationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTAnimationTableViewController.h; sourceTree = "<group>"; };
 		8DBC40401AF790F5006CCEC8 /* MMTAnimationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTAnimationTableViewController.m; sourceTree = "<group>"; };
 		8DF1A7411B0CA714007A9DE1 /* DCHBubbleAnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCHBubbleAnimatedTransitioning.h; sourceTree = "<group>"; };
@@ -120,6 +132,7 @@
 		8D2F81261AF74BCE0093430D /* Monet */ = {
 			isa = PBXGroup;
 			children = (
+				8D9D0ED91B0D6CA8002317BD /* ColoeArt */,
 				8DF1A7401B0CA714007A9DE1 /* BubbleTransition */,
 				8DF1A7431B0CA714007A9DE1 /* SpringFlowLayout */,
 				8DBC403F1AF790F5006CCEC8 /* MMTAnimationTableViewController.h */,
@@ -158,6 +171,21 @@
 				8D2F81421AF74BCE0093430D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8D9D0ED91B0D6CA8002317BD /* ColoeArt */ = {
+			isa = PBXGroup;
+			children = (
+				8D9D0EE71B0D7404002317BD /* DCHLinearGradientView.h */,
+				8D9D0EE81B0D7404002317BD /* DCHLinearGradientView.m */,
+				8D9D0EDA1B0D6CC4002317BD /* UIImage+DCHColorArt.h */,
+				8D9D0EDB1B0D6CC4002317BD /* UIImage+DCHColorArt.m */,
+				8D9D0EE21B0D73A4002317BD /* ColoeArtTableViewController.h */,
+				8D9D0EE31B0D73A4002317BD /* ColoeArtTableViewController.m */,
+				8D9D0EEA1B0D7FF9002317BD /* ColorArtTableViewCell.h */,
+				8D9D0EEB1B0D7FF9002317BD /* ColorArtTableViewCell.m */,
+			);
+			path = ColoeArt;
 			sourceTree = "<group>";
 		};
 		8DF1A7401B0CA714007A9DE1 /* BubbleTransition */ = {
@@ -363,10 +391,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DF1A7461B0CA714007A9DE1 /* DCHBubbleAnimatedTransitioning.m in Sources */,
+				8D9D0EDC1B0D6CC4002317BD /* UIImage+DCHColorArt.m in Sources */,
 				8D2F812D1AF74BCE0093430D /* AppDelegate.m in Sources */,
 				8DF1A74B1B0CA90A007A9DE1 /* BubbleTransitionViewController.m in Sources */,
+				8D9D0EE51B0D73A4002317BD /* ColoeArtTableViewController.m in Sources */,
 				8DF1A7501B0CA929007A9DE1 /* BubbleTransitionModalViewController.m in Sources */,
 				8D2F812A1AF74BCE0093430D /* main.m in Sources */,
+				8D9D0EED1B0D7FF9002317BD /* ColorArtTableViewCell.m in Sources */,
+				8D9D0EE91B0D7404002317BD /* DCHLinearGradientView.m in Sources */,
 				8DF1A7471B0CA714007A9DE1 /* TLSpringFlowLayout.m in Sources */,
 				8DBC40411AF790F5006CCEC8 /* MMTAnimationTableViewController.m in Sources */,
 			);
