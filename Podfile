@@ -11,6 +11,8 @@ pod 'AwesomeMenu', '~> 1.0.0'
 pod 'AMWaveTransition', '~> 0.5.7'
 pod 'BFPaperTableViewCell', '~> 2.3.3'
 pod 'BRFlabbyTable', '~> 1.0.0'
+pod 'RXCollections', '~> 1.0'
+
 end
 
 target 'MonetTests' do
