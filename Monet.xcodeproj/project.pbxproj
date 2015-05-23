@@ -11,7 +11,6 @@
 		8D2F812A1AF74BCE0093430D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2F81291AF74BCE0093430D /* main.m */; };
 		8D2F812D1AF74BCE0093430D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2F812C1AF74BCE0093430D /* AppDelegate.m */; };
 		8D2F81331AF74BCE0093430D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D2F81311AF74BCE0093430D /* Main.storyboard */; };
-		8D2F81351AF74BCE0093430D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D2F81341AF74BCE0093430D /* Images.xcassets */; };
 		8D2F81381AF74BCE0093430D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D2F81361AF74BCE0093430D /* LaunchScreen.xib */; };
 		8D2F81441AF74BCE0093430D /* MonetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D2F81431AF74BCE0093430D /* MonetTests.m */; };
 		8D9D0EDC1B0D6CC4002317BD /* UIImage+DCHColorArt.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D0EDB1B0D6CC4002317BD /* UIImage+DCHColorArt.m */; };
@@ -19,6 +18,7 @@
 		8D9D0EE91B0D7404002317BD /* DCHLinearGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D0EE81B0D7404002317BD /* DCHLinearGradientView.m */; };
 		8D9D0EED1B0D7FF9002317BD /* ColorArtTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D0EEB1B0D7FF9002317BD /* ColorArtTableViewCell.m */; };
 		8DBC40411AF790F5006CCEC8 /* MMTAnimationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DBC40401AF790F5006CCEC8 /* MMTAnimationTableViewController.m */; };
+		8DCA7B6C1B0F71C000AB8FB7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DCA7B6B1B0F71C000AB8FB7 /* Images.xcassets */; };
 		8DF1A7461B0CA714007A9DE1 /* DCHBubbleAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF1A7421B0CA714007A9DE1 /* DCHBubbleAnimatedTransitioning.m */; };
 		8DF1A7471B0CA714007A9DE1 /* TLSpringFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF1A7451B0CA714007A9DE1 /* TLSpringFlowLayout.m */; };
 		8DF1A74B1B0CA90A007A9DE1 /* BubbleTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF1A7491B0CA90A007A9DE1 /* BubbleTransitionViewController.m */; };
@@ -47,7 +47,6 @@
 		8D2F812B1AF74BCE0093430D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8D2F812C1AF74BCE0093430D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8D2F81321AF74BCE0093430D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8D2F81341AF74BCE0093430D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8D2F81371AF74BCE0093430D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		8D2F813D1AF74BCE0093430D /* MonetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D2F81421AF74BCE0093430D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,6 +61,7 @@
 		8D9D0EEB1B0D7FF9002317BD /* ColorArtTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorArtTableViewCell.m; sourceTree = "<group>"; };
 		8DBC403F1AF790F5006CCEC8 /* MMTAnimationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTAnimationTableViewController.h; sourceTree = "<group>"; };
 		8DBC40401AF790F5006CCEC8 /* MMTAnimationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTAnimationTableViewController.m; sourceTree = "<group>"; };
+		8DCA7B6B1B0F71C000AB8FB7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8DF1A7411B0CA714007A9DE1 /* DCHBubbleAnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCHBubbleAnimatedTransitioning.h; sourceTree = "<group>"; };
 		8DF1A7421B0CA714007A9DE1 /* DCHBubbleAnimatedTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCHBubbleAnimatedTransitioning.m; sourceTree = "<group>"; };
 		8DF1A7441B0CA714007A9DE1 /* TLSpringFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLSpringFlowLayout.h; sourceTree = "<group>"; };
@@ -140,8 +140,8 @@
 				8D2F812B1AF74BCE0093430D /* AppDelegate.h */,
 				8D2F812C1AF74BCE0093430D /* AppDelegate.m */,
 				8D2F81311AF74BCE0093430D /* Main.storyboard */,
-				8D2F81341AF74BCE0093430D /* Images.xcassets */,
 				8D2F81361AF74BCE0093430D /* LaunchScreen.xib */,
+				8DCA7B6B1B0F71C000AB8FB7 /* Images.xcassets */,
 				8D2F81271AF74BCE0093430D /* Supporting Files */,
 			);
 			path = Monet;
@@ -306,10 +306,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D2F81331AF74BCE0093430D /* Main.storyboard in Resources */,
+				8DCA7B6C1B0F71C000AB8FB7 /* Images.xcassets in Resources */,
 				8DF1A74C1B0CA90A007A9DE1 /* BubbleTransitionViewController.xib in Resources */,
 				8DF1A7511B0CA929007A9DE1 /* BubbleTransitionModalViewController.xib in Resources */,
 				8D2F81381AF74BCE0093430D /* LaunchScreen.xib in Resources */,
-				8D2F81351AF74BCE0093430D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

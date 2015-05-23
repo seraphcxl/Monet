@@ -76,7 +76,7 @@
         }
         
         NSCountedSet *selectedColorSet = [colorSet rx_filterWithBlock:^BOOL(id each) {
-            return [colorSet countForObject:each] > pixels * 0.01f;
+            return [colorSet countForObject:each] > pixels * 0.005f;
         }];
         
         NSArray *selectedColorSortedAry = [selectedColorSet.allObjects sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {

@@ -16,6 +16,7 @@ const NSUInteger kColoeArtTableViewController_CellSize = 256;
 
 @interface ColoeArtTableViewController () <UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic, strong) NSArray *picNameAry;
 @property (nonatomic, strong) NSDictionary *picDic;
 @property (nonatomic, strong) NSMutableDictionary *colorDic;
 @property (nonatomic, strong) UITableView *tableView;
@@ -32,16 +33,41 @@ const NSUInteger kColoeArtTableViewController_CellSize = 256;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.picNameAry = @[@"Angelababy"
+                        , @"EmmaWatson"
+                        , @"CaraDelevingne"
+                        , @"ChenYiYun"
+                        , @"AudreyHepburn"
+                        , @"GaoYuanYuan"
+                        , @"FanBinBin"
+                        , @"EvaGreen"
+                        , @"LimYoonA"
+                        , @"LinZhiLing"
+                        , @"MirandaMayKerr"
+                        , @"LiuShiShi"
+                        , @"SongHuiQiao"
+                        , @"MizuharaKiko"
+                        , @"XuRuoXuan"
+                        , @"TaylorSwift"
+                        ];
+    
     self.picDic = @{@"Angelababy": @"Angelababy"
-                          , @"AudreyHepburn": @"Audrey Hepburn"
-                          , @"ChenYiYun": @"Chen YiYun"
-                          , @"EmmaWatson": @"Emma Watson"
-                          , @"EvaGreen": @"Eva Green"
-                          , @"GaoYuanYuan": @"Gao YuanYuan"
-                          , @"LiuShiShi": @"Liu ShiShi"
-                          , @"SongHuiQiao": @"Song HuiQiao"
-                          , @"TaylorSwift": @"Taylor Swift"
-                          };
+                    , @"AudreyHepburn": @"Audrey Hepburn"
+                    , @"CaraDelevingne": @"Cara Delevingne"
+                    , @"ChenYiYun": @"Chen YiYun"
+                    , @"EmmaWatson": @"Emma Watson"
+                    , @"EvaGreen": @"Eva Green"
+                    , @"GaoYuanYuan": @"Gao YuanYuan"
+                    , @"LiuShiShi": @"Liu ShiShi"
+                    , @"SongHuiQiao": @"Song HuiQiao"
+                    , @"TaylorSwift": @"Taylor Swift"
+                    , @"FanBinBin": @"Fan BinBin"
+                    , @"LimYoonA": @"Lim YoonA"
+                    , @"LinZhiLing": @"Lin ZhiLing"
+                    , @"MirandaMayKerr": @"Miranda May Kerr"
+                    , @"MizuharaKiko": @"Mizuhara Kiko"
+                    , @"XuRuoXuan": @"Xu RuoXuan"
+                    };
     
     self.colorDic = [NSMutableDictionary dictionary];
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
@@ -72,9 +98,9 @@ const NSUInteger kColoeArtTableViewController_CellSize = 256;
     ColorArtTableViewCell *cell = (ColorArtTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"ColorArtTableViewCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    UIImage *image = [UIImage imageNamed:self.picDic.allKeys[indexPath.row]];
+    UIImage *image = [UIImage imageNamed:self.picNameAry[indexPath.row] inBundle:nil compatibleWithTraitCollection:nil];
     UIColor *clr = [self.colorDic objectForKey:@(indexPath.row)];
-    NSString *title = self.picDic.allValues[indexPath.row];
+    NSString *title = self.picDic[self.picNameAry[indexPath.row]];
     
     if (indexPath.row % 2) {
         if (!clr) {
