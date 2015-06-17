@@ -105,12 +105,12 @@ const NSUInteger kColoeArtTableViewController_CellSize = 256;
     if (indexPath.row % 2) {
         if (!clr) {
             clr = [image findEdgeColorWithType:DCHColorArt_EdgeType_Left countOfLine:1 alphaEnable:NO];
-            [self.colorDic DCH_safe_setObject:clr forKey:@(indexPath.row)];
+            [self.colorDic dch_safe_setObject:clr forKey:@(indexPath.row)];
         }
     } else {
         if (!clr) {
             clr = [image findEdgeColorWithType:DCHColorArt_EdgeType_Right countOfLine:1 alphaEnable:NO];
-            [self.colorDic DCH_safe_setObject:clr forKey:@(indexPath.row)];
+            [self.colorDic dch_safe_setObject:clr forKey:@(indexPath.row)];
         }
     }
     
